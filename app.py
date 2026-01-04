@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="MNIST Digit Classifier", layout="centered")
-st.title("🧠 MNIST Digit Classification")
+st.title("MNIST Digit Classification")
 st.write("CNN model using TensorFlow & Streamlit")
 
 @st.cache_resource
@@ -37,11 +37,11 @@ def load_data_and_model():
 
 model, x_test, y_test = load_data_and_model()
 
-st.subheader("📊 Model Accuracy")
+st.subheader("Model Accuracy")
 loss, acc = model.evaluate(x_test, y_test, verbose=0)
 st.success(f"Accuracy: {acc * 100:.2f}%")
 
-st.subheader("🔢 Predict a Random Digit")
+st.subheader("Predict a Random Digit")
 
 if st.button("Predict"):
     idx = np.random.randint(0, len(x_test))
@@ -56,10 +56,10 @@ if st.button("Predict"):
     ax.axis("off")
     st.pyplot(fig)
 
-    st.write("✅ **Predicted Digit:**", predicted_label)
-    st.write("🎯 **Actual Digit:**", true_label)
+    st.write("Predicted Digit:", predicted_label)
+    st.write("Actual Digit:", true_label)
 
     if predicted_label == true_label:
-        st.success("Correct Prediction 🎉")
+        st.success("Correct Prediction ")
     else:
-        st.error("Wrong Prediction ❌")
+        st.error("Wrong Prediction ")
