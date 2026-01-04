@@ -38,6 +38,7 @@ Convolutional Neural Networks (CNN)
 can be used for experimentation and performance comparison.
 
 Results
+
 The trained model achieves high accuracy on the test dataset.
 The model successfully predicts handwritten digits from 0 to 9.
 Visualization of predictions helps understand model performance.
